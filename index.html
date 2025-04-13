@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WELCOME TO|MY PORTOFOLIO</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+      color: #003366;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .wrapper {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+    .section {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 1s ease, transform 1s ease, filter 1s ease;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .section.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .section.morph-out {
+      opacity: 0;
+      transform: scale(0.95);
+      filter: blur(10px);
+    }
+    .section.morph-in {
+      opacity: 1;
+      transform: scale(1);
+      filter: blur(0);
+    }
+    .hero h1 {
+      font-size: 3rem;
+      animation: morphText 4s ease-in-out infinite;
+    }
+    @keyframes morphText {
+      0%   { letter-spacing: 2px; transform: scale(1); opacity: 1; }
+      50%  { letter-spacing: 8px; transform: scale(1.08); opacity: 0.8; }
+      100% { letter-spacing: 2px; transform: scale(1); opacity: 1; }
+    }
+    .social-icons a {
+      color: #003366;
+      margin: 0 15px;
+      font-size: 30px;
+    }
+    .card {
+      background-color: #e3f2fd;
+      border: none;
+      color: #003366;
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    .profile-img {
+      max-width: 100px;
+      border-radius: 0%;
+      margin-bottom: 30px;
+    }
+    .task-img {
+      width: 30%;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+    .next-btn {
+      margin-top: 30px;
+      padding: 10px 25px;
+      font-size: 16px;
+      background-color: #007bff;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+    .next-btn:hover {
+      background-color: #0056b3;
+    }
+    @media (max-width: 768px) {
+      .task-img {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrapper">
+  <!-- Halaman 1 -->
+  <section class="section active hero" id="section0">
+    <h1>WELCOME TO|MY PORTOFOLIO</h1>
+    <p class="mt-3">What are you looking for?</p>
+    <p class="mt-3">What do you need?</p>
+    <p class="mt-3">What are you trying to find?</p>
+    <div class="social-icons mt-4">
+      <a href="https://wa.me/qr/UJNFVRWUS2IIL1"> <i class="fab fa-whatsapp"> </i></a>
+      <a href="https://www.instagram.com/hakimagamal?igsh=bnF6czh4MWhzY3Ey"> <i class="fab fa-instagram"></i></a>
+      <a href="https://vm.tiktok.com/ZSr9aAmPy/"> <i class="fab fa-tiktok"> </i></a>
+      <a href="mailto:agam06614@gmail.com"> <i class="fas fa-envelope"> </i></a>
+    </div>
+    <button class="next-btn" onclick="goToNext()">Klik Selanjutnya</button>
+  </section>
+
+  <!-- Halaman 2 -->
+  <section class="section text-center" id="section1">
+    <img src="20.jpg" alt="Foto Profil" class="profile-img">
+    <h2>TENTANG Saya</h2>
+    <p class="mt-3 px-3">Halo! saya adalah seorang kreator digital yang menyediakan jasa pembuatan website sederhana, desain logo, dan juga joki tugas untuk pelajar SMK, SMA, hingga mahasiswa. Dengan pengalaman di bidang teknologi dan desain, saya siap membantu menyelesaikan kebutuhan tugas dan branding kamu!</p>
+    <button class="next-btn" onclick="goToNext()">Klik Selanjutnya</button>
+  </section>
+
+  <!-- Halaman 3 -->
+  <section class="section" id="section2">
+    <div class="container">
+      <h2 class="text-center mb-5">JASA & LAYANAN</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card p-3">
+            <img src="foto pryek web.png" alt="Website Sederhana" class="task-img">
+            <h5>Pembuatan Website Sederhana</h5>
+            <p>Kami juga menyediakan layanan pembuatan website,landing page, atau profil usaha dan pribadi dengan desain menarik dan responsif dengan harga yang terjangkau dan tergantung tingkat kesulitan .</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card p-3">
+            <img src="logo pembuatan logo.png" alt="Logo Perusahaan" class="task-img">
+            <h5>Pembuatan Logo Perusahaan</h5>
+            <p>Kami juga menyediakan layanan pembuatan Desain logo dengan desain yang menarik untuk brand, UMKM, atau proyek startup anda.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card p-3">
+            <img src="foto proyek joki tugas.png" alt="Joki Tugas" class="task-img">
+            <h5>Joki Tugas Sekolah & Kuliah</h5>
+            <p>Kami juga menyediakan layanan jasa bantu tugas pelajar SMK, SMA, hingga mahasiswa — termasuk coding, desain, dan laporan Magang dan Laporan praktikum.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Modal Gambar -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-transparent border-0">
+      <img id="modalImage" src="" class="w-100 rounded-4" alt="Preview">
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  let currentIndex = 0;
+
+  function goToNext() {
+    const current = document.getElementById(`section${currentIndex}`);
+    const next = document.getElementById(`section${currentIndex + 1}`);
+    if (!next) return;
+
+    current.classList.add("morph-out");
+    current.classList.remove("active");
+
+    setTimeout(() => {
+      current.classList.remove("morph-out");
+      next.classList.add("active", "morph-in");
+
+      setTimeout(() => {
+        next.classList.remove("morph-in");
+      }, 1000);
+
+      currentIndex++;
+    }, 800);
+  }
+
+  // Modal gambar
+  const taskImages = document.querySelectorAll('.task-img');
+  const modalImage = document.getElementById('modalImage');
+  const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+
+  taskImages.forEach(img => {
+    img.addEventListener('click', () => {
+      modalImage.src = img.src;
+      imageModal.show();
+    });
+  });
+</script>
+</body>
+</html>
